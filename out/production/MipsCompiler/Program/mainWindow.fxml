@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="711.0" prefWidth="817.0"
+            xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Program.Controller">
+    <top>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Button fx:id="runButton" mnemonicParsing="false" onAction="#runCode"
+                        text="Run">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" text="Clear Console"
+                        fx:id="clearConsoleButton" onAction="#clearConsole"/>
+                <Pane prefHeight="38.0" prefWidth="552.0"/>
+                <Button fx:id="helpButton" mnemonicParsing="false"
+                        onAction="#showHelp" text="Help" textFill="#05b51f"/>
+                <Button fx:id="exitButton" mnemonicParsing="false"
+                        onAction="#exitProgram" text="Exit" textAlignment="CENTER"
+                        textFill="#bf1b1b"/>
+            </items>
+        </ToolBar>
+    </top>
+    <center>
+        <TextArea fx:id="codeEditor" prefHeight="200.0" prefWidth="200.0"
+                  BorderPane.alignment="CENTER">
+            <font>
+                <Font size="26.0"/>
+            </font>
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow/>
+                    </bumpInput>
+
+                </Lighting>
+            </effect>
+        </TextArea>
+    </center>
+    <bottom>
+        <TextArea fx:id="consoleOutput" editable="false" prefHeight="237.0"
+                  prefWidth="817.0" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="20.0"/>
+            </font>
+            <effect>
+                <SepiaTone/>
+            </effect>
+        </TextArea>
+    </bottom>
+</BorderPane>

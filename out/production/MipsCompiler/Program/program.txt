@@ -1,0 +1,16 @@
+ADDI $t0,$t2,200
+BEQ $t0,$t0,Lbl
+ADDI $t0,$t0,1000
+Lbl:
+ADDI $t0,$t0,200
+ADDI $t1,$t0,200
+ADDI $t2,$t0,200
+ADDI $t3,$t0,200
+BEQ, $t3,$zero,Lbl2
+ADDI $t5,$t0,200
+ADDI $t6,$t0,200
+ADDI $t7,$t0,200
+Lbl2:
+ADDI $t3,$t3,200
+SW $t6,20($t7)
+LW $t3,20($t7)
