@@ -1,2 +1,3 @@
 # MipsCompiler
-A way to simulate common Mips instructions. For the moment it only supports a few basic but vital instructions.
+A basic mips simulator written in java with the javafx framework. 
+For the moment it only supports a few basic but vital instructions.
